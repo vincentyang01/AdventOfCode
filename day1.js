@@ -10,6 +10,18 @@ function product(arr){
     }
 }
 
+function threeSum(arr){
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr.length; j++){
+            for(let k = 0; k < arr.length; k++){
+                if(arr[i] + arr[j] + arr[k] === 2020){
+                    return arr[i] * arr[j] * arr[k]
+                }
+            }
+        }
+    }
+}
+
 console.log(product([1864,
 1192,
 1802,
