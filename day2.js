@@ -14,10 +14,21 @@ function day2(arr){
         }
         count >= smallBound[0] && count <= bigBound[0] ? counter++ : null
     }
-    
     return counter
-    
-        
+}
+
+function day2part2(arr){
+    let counter = 0;
+    for(let x = 0; x < arr.length; x++){
+        let splitStr = arr[x].split(':');
+        let smallBound = splitStr[0].split('-')
+        let bigBound = smallBound[1].split(' ')
+        let letter = bigBound[1]
+        if((splitStr[1][smallBound[0]] === letter && splitStr[1][bigBound[0]] !== letter)||(splitStr[1][smallBound[0]] !== letter && splitStr[1][bigBound[0]] === letter)){
+            counter++
+        }
+    }
+    return counter
 }
 
 console.log(day2(["1-4 m: mrfmmbjxr",
