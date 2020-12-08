@@ -1,7 +1,7 @@
 // function day7(){
-//     let fs = require('fs') 
-//     fs.readFile('./day7.txt', 'utf8', function (err, data) {
-//         if (err) throw err;
+    // let fs = require('fs') 
+    // fs.readFile('./day7.txt', 'utf8', function (err, data) {
+    //     if (err) throw err;
         
 //         // let rules = ["light red bags contain 1 bright white bag, 2 muted yellow bags.",
 //         //     "dark orange bags contain 3 bright white bags, 4 muted yellow bags.",
