@@ -1,17 +1,42 @@
 function slope(arr){
-    let j = 0
-    let count = 0
+    let trees = 0;
+    let across = 0;
     for(let i = 0; i < arr.length; i++){
-    if(arr[i][j] === '#'){
-        count++
+        if(arr[i][across] === "#"){
+            trees++
+        }
+        across += 3
+        if(across > arr[i].length - 1){
+            across %= arr[i].length
+        }
     }
-    j = j + 7
-    if(j > 30){
-        j = j - 31
-    }
+    return trees
+//     let j = 0
+//     let count = 0
+//     for(let i = 0; i < arr.length; i++){
+//     if(arr[i][j] === '#'){
+//         count++
+//     }
+//     j = j + 7
+//     if(j > 30){
+//         j = j - 31
+//     }
+// }
+//     return count
 }
-    return count
-}
+
+// console.log(slope([
+//     "..##.......",
+//     "#...#...#..",
+//     ".#....#..#.",
+//     "..#.#...#.#",
+//     ".#...##..#.",
+//     "..#.##.....",
+//     ".#.#.#....#",
+//     ".#........#",
+//     "#.##...#...",
+//     "#...##....#",
+//     ".#..#...#.#"]))
 
 console.log(slope([
 "...........#..#.#.###....#.....",
