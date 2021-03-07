@@ -31,6 +31,8 @@ function day12(){
                 console.log("Before changing: ", facingDirection)
                 facingDirection -= (num / 90)
                 facingDirection += 4
+                if(facingDirection < 0) facingDirection += 4
+                if(facingDirection > 0) facingDirection %= 4
                 console.log("After changing: ", facingDirection)
             }
 
